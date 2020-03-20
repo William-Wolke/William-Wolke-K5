@@ -33,3 +33,19 @@ main {
     position: fixed;
     background-color: purple;
 }
+
+.navbar-nav {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-item {
+    width: 100%;
+}
+
+.nav-item:last-child {
+margin-top: auto;
+}
