@@ -11,14 +11,14 @@ body{
 }
 
 body::-webkit-scrollbar {
-    width: 0.25rem;
+    width: 1rem;
 }
 
 body::-webkit-scrollbar-track {
     background: black;
 }
 
-body::-webkit-scrollbar-track {
+body::-webkit-scrollbar-thumb {
     background: purple;
 }
 
@@ -32,6 +32,7 @@ main {
     height: 100vh;
     position: fixed;
     background-color: purple;
+    transition: 500ms ease;
 }
 
 .navbar-nav {
@@ -48,4 +49,51 @@ main {
 
 .nav-item:last-child {
 margin-top: auto;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: purple;
+    text-decoration: none;
+
+}
+
+.link-text {
+    display: none;
+    margin-left: 5rem;
+
+}
+
+.nav-link svg {
+    min-width: 2rem;
+    margin: 0 1.5rem;
+}
+
+.navbar:hover {
+    width: 16rem;
+}
+
+.navbar:hover .link-text {
+    display: block;
+}
+
+@media only screen and (max-width: 600px) {
+
+}
+
+@media only screen and (min-width: 600px) {
+    .navbar {
+        top: 0;
+        width: 5rem;
+        height: 100vh;
+    }
+    .navbar:hover {
+        width: 16rem;
+    }
+
+    .navbar:hover .lin-text {
+        display: inline;
+    }
 }
