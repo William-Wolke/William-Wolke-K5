@@ -31,7 +31,7 @@ main {
     width: 5rem;
     height: 100vh;
     position: fixed;
-    background-color: purple;
+    background-color: darkslategrey;
     transition: 500ms ease;
 }
 
@@ -41,10 +41,12 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: purple;
 }
 
 .nav-item {
     width: 100%;
+    
 }
 
 .nav-item:last-child {
