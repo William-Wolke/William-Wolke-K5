@@ -1,11 +1,12 @@
 * {
     font-size: 16px;
     font-size: 1rem;
+    
 }
 
 body{
-    color: black;
-    background-color: white;
+    color: white;
+    background-color: black;
     margin: 0;
     padding: 0;
 }
@@ -58,13 +59,11 @@ main {
     height: 5rem;
     color: purple;
     text-decoration: none;
-
 }
 
 .link-text {
     display: none;
     margin-left: 5rem;
-
 }
 
 .nav-link svg {
