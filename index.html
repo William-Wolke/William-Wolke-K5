@@ -10,29 +10,45 @@
 <body>
     <nav class="navbar">
         <div class="navbar-nav">
-            <a href="#">HOME</a>
-            <a href="#">CONTACT</a>
-            <a href="#">PROJECTS</a>
+            <a href="#hero">home</a>
+            <a href="">contact</a>
+            <a href="#projects">projects</a>
         </div>
 
 
 
     </nav>
     
-    <div class="hero">
+    <section id="hero">
         <div id="header">
-            <h1>Hi there, I'm William.</h1>
+            <h1>Hi, I'm William.</h1>
             <hr>
         </div>
 
         <div>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus ex amet magnam a molestias sit hic id dolorem quae. Recusandae perferendis quae fugiat nisi alias totam, repudiandae repellat accusantium cum.</p>
-        </div>
-        <div>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, architecto molestiae iste eaque esse modi voluptatibus fugit vel autem sequi ratione laborum tempore magnam unde maxime beatae alias ab eos!</p>
-        </div>
+            <p>I am a webbdeveloper and software developer from Stockholm, Sweden. I make professional looking websites to help smaller business.</p>
+        </div>  
         
-    </div>
+        <img src="img/pexels-photo-320014.jpeg" alt="A cute kitten">
+    </section>
+
+    <section id="projects">
+        <h2>My projects</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum nulla tempora ex animi magni reprehenderit voluptatum esse, modi architecto a. Nulla ipsam molestias ex obcaecati earum! Expedita, eos? Harum, error?</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact me</h2>
+        <form class="contact-form" action="contactform.php" method="POST">
+            <input type="text" name="name" placeholder="Full Name">
+            <input type="text" name="mail" placeholder="Email">
+            <input type="text" name="subject" placeholder="Subject">
+            <textarea name="message" placeholder="Message" cols="30" rows="10"></textarea>
+            <button type="submit" name="submit">SEND</button>
+        </form>
+    </section>
+
+
     
     
 </body>

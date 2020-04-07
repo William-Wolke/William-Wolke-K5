@@ -1,6 +1,5 @@
 *{
     font-size: 16px;
-    font-size: 1rem;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -20,11 +19,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb{
-    background: #3587A4;
-}
-
-.hero{
-    padding: 1rem;
+    background: #0A7A99;
 }
 
 .navbar{
@@ -32,6 +27,8 @@ body::-webkit-scrollbar-thumb{
     position: fixed;
     bottom: 0;
     width: 100%;
+    z-index: 1;
+    text-transform: uppercase;
 }
 
 .navbar-nav{
@@ -40,7 +37,7 @@ body::-webkit-scrollbar-thumb{
     align-items: center;
     text-align: center;
     grid-template-columns: repeat(3, 1fr);
-    background-color: #3587A4;
+    background-color: #0A7A99;
 }
 
 .navbar-nav a{
@@ -60,6 +57,53 @@ body::-webkit-scrollbar-thumb{
 a {
     text-decoration: none;
     color: black;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+#hero {
+    background: #0A7A99;
+    color: #fff;
+    position: relative;
+    padding: 1rem;
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 100%,
+      0 calc(100% - 3vw)
+    );
+    
+    padding-bottom: 1rem;
+}
+
+#hero p{
+    font-size: 1.5rem;
+}
+
+#hero img{
+    max-width: 90vw;
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 100%,
+      0 calc(100% - 3vw)
+    );
+    border-radius: 10px;
+}
+
+/* Fix/hack for 1080p+ displays */
+@media screen and (min-width: 1921px) {
+    .hero {
+      padding-bottom: 5px;
+      margin-bottom: 240px !important;
+    }
+
+    .hero:after {
+      bottom: -220px !important;
+  }
 }
 
 @media only screen and (min-width: 600px) {
