@@ -1,12 +1,12 @@
-* {
+*{
     font-size: 16px;
     font-size: 1rem;
-    
+    font-family: 'Raleway', sans-serif;
 }
 
 body{
     color: white;
-    background-color: black;
+    background-color: #090909;
     margin: 0;
     padding: 0;
 }
@@ -19,64 +19,42 @@ body::-webkit-scrollbar-track {
     background: black;
 }
 
-body::-webkit-scrollbar-thumb {
-    background: purple;
+body::-webkit-scrollbar-thumb{
+    background: #3587A4;
 }
 
-main {
-    margin-left: 5rem;
+.hero{
     padding: 1rem;
 }
 
-.navbar {
+.navbar{
+    overflow: hidden;
     position: fixed;
-    background-color: darkslategrey;
-    transition: 500ms ease;
-    background-color: var(--bg-primary);
-}
-
-.navbar-nav {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: purple;
-}
-
-.nav-item {
+    bottom: 0;
     width: 100%;
-    
 }
 
-.nav-item:last-child {
-    margin-top: auto;
-}
-
-.nav-link {
-    display: flex;
+.navbar-nav{
+    margin: 0;
+    display: grid;
     align-items: center;
-    height: 5rem;
-    color: purple;
-    text-decoration: none;
+    text-align: center;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #3587A4;
 }
 
-.link-text {
-    display: none;
-    margin-left: 5rem;
+.navbar-nav a{
+    padding: 1.5rem 1vw 1.5rem 1vw;
+   /*border-right: 3px solid black;*/
 }
 
-.nav-link svg {
-    min-width: 2rem;
-    margin: 0 1.5rem;
+.navbar-nav a:last-child{
+    border-right: none;
 }
 
-.navbar:hover {
-    width: 16rem;
-}
-
-.navbar:hover .link-text {
-    display: block;
+.navbar-nav a:hover {
+    cursor: pointer;
+    background-color: rgb(44, 114, 139);
 }
 
 a {
@@ -84,32 +62,22 @@ a {
     color: black;
 }
 
-@media only screen and (max-width: 600px) {
-    .navbar {
-        bottom: 0;
-        width: 100vw;
-        height: 5rem;
-    }
-
-    .navbar-nav{
-        flex-direction: row;
-    }
-
-    .nav-link {
-        justify-content: center;
-    }
-
-    main {
-        margin: 0;
-    }
-}
-
 @media only screen and (min-width: 600px) {
     .navbar {
         top: 0;
         width: 5rem;
         height: 100vh;
+        
+    transition: 500ms ease;
     }
+
+    .navbar-nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
     .navbar:hover {
         width: 16rem;
     }
