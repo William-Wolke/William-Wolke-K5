@@ -1,3 +1,4 @@
+/*ALLMÄNT*/
 *{
     font-size: 16px;
     font-family: 'Raleway', sans-serif;
@@ -5,8 +6,8 @@
 
 body{
     color: white;
-    background-color: #090909;
-    margin: 0;
+    background: #0A7A99;
+    margin: 0 0 4rem 0;
     padding: 0;
 }
 
@@ -22,6 +23,25 @@ body::-webkit-scrollbar-thumb{
     background: #0A7A99;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+h2{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+/*ALLMÄNT SLUT*/
+
+
+
+/*NAV*/
 .navbar{
     overflow: hidden;
     position: fixed;
@@ -42,59 +62,183 @@ body::-webkit-scrollbar-thumb{
 
 .navbar-nav a{
     padding: 1.5rem 1vw 1.5rem 1vw;
-   /*border-right: 3px solid black;*/
-}
-
-.navbar-nav a:last-child{
-    border-right: none;
+    width: 100%;
 }
 
 .navbar-nav a:hover {
     cursor: pointer;
-    background-color: rgb(44, 114, 139);
+    background-color: #3A606E;
 }
+/*NAV SLUT*/
 
-a {
-    text-decoration: none;
-    color: black;
-}
 
-h1 {
-    font-size: 2.5rem;
-    text-transform: uppercase;
-}
 
+/*HERO DEL M.A.O. HOME*/
 #hero {
-    background: #0A7A99;
+    background-color: #000;
     color: #fff;
     position: relative;
     padding: 1rem;
-    clip-path: polygon(
-      0 0,
-      100% 0,
-      100% 100%,
-      0 calc(100% - 3vw)
-    );
-    
     padding-bottom: 1rem;
 }
 
-#hero p{
+#hero:after{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform-origin: top left;
+    transform: skewY(4deg);
+}
+
+#hero-p{
     font-size: 1.5rem;
 }
 
 #hero img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     max-width: 90vw;
-    clip-path: polygon(
-      0 0,
-      100% 0,
-      100% 100%,
-      0 calc(100% - 3vw)
-    );
-    border-radius: 10px;
+    filter: grayscale(100%);
+    transform-origin: top left;
+    transform: skewY(4deg);
 }
 
-/* Fix/hack for 1080p+ displays */
+#hero img:hover{
+    transition: ease-in-out 1s;
+    filter: grayscale(0%);
+}
+/*HERO DEL M.A.O. HOME END*/
+
+
+
+/*PROJECTS DEL*/
+#projects{
+    position: relative;
+    padding: 1rem;
+    padding-bottom: 5rem;
+}
+
+.projects-desktop{
+    display: none;
+}
+
+.projects-mobile a{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    padding: 0 0 .5rem 0;
+    text-align: center;
+    text-shadow: 1px 2px 1px #fff;
+}
+
+.projects-mobile a:hover{
+    color: #fff;
+    text-shadow: 1px 2px 1px #000;
+}
+
+.projects-mobile a:after {
+    content: '';
+    position: absolute;
+    left: 30vw;
+    display: inline-block;
+    height: 1em;
+    width: 40%;
+    border-bottom: 1px solid #fff;
+    margin-top: 10px;
+    opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale(0,1);
+	transform: scale(0,1);
+}
+
+.projects-mobile a:hover:after {
+    opacity: 1;
+	-webkit-transform: scale(1);
+    transform: scale(1);
+}
+/*PROJECTS DEL END*/
+
+
+
+/*CONTACT*/
+#contact{
+    background-color: #000;
+    position: relative;
+    padding: 1rem;
+    margin-top: .0rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact:after{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform-origin: top right;
+    transform: skewY(4deg);
+}
+
+form{
+    margin-top: 1rem;
+}
+
+.form-control{
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid gray;
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+input{
+    height: 2rem;
+}
+
+form .submit{
+    background-color: #0A7A99;
+    border-color: transparent;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: .2rem;
+    height: 3rem;
+    margin-top: 1.2rem;
+    border-radius: 1.5rem;
+}
+
+form .submit:hover{
+    background-color: #3A606E;
+    cursor: pointer;
+}
+/*CONTACT END*/
+
+/*Footer*/
+footer{
+    display: none;
+}
+
+
+/*Footer end*/
 @media screen and (min-width: 1921px) {
     .hero {
       padding-bottom: 5px;
@@ -106,13 +250,56 @@ h1 {
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1400px){
+    #hero {
+        background-image: url("img/cat-3678858_1920.jpg");
+        filter: grayscale(100%);
+        color: #fff;
+        position: relative;
+        padding: 1rem;
+        padding-top: 20vh;
+        padding-bottom: 1rem;
+        height: 90vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    #hero:after{
+        transform: skewY(0deg);
+    }
+    
+    #hero h1{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    #hero p{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    
+    #hero img{
+        display: none;
+    }
+}
+
+
+@media only screen and (min-width: 700px) {
+    body{
+        margin: 0;
+    }
+    
+    main{
+        margin: 0 6rem 0 0;
+    }
+
     .navbar {
+        right: 0;
         top: 0;
-        width: 5rem;
+        width: 6rem;
         height: 100vh;
-        
-    transition: 500ms ease;
+        transition: 500ms ease;
     }
 
     .navbar-nav{
@@ -122,11 +309,147 @@ h1 {
         justify-content: center;
     }
 
-    .navbar:hover {
-        width: 16rem;
+    #hero {
+        background-image: url("img/cat-3678858_1920.jpg");
+        filter: grayscale(100%);
+        color: #fff;
+        position: relative;
+        padding: 1rem;
+        padding-top: 20vh;
+        padding-bottom: 1rem;
+        height: 78.3vh;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
     }
 
-    .navbar:hover .link-text {
-        display: inline;
+    #hero:after{
+        transform: skewY(0deg);
+    }
+
+    #hero p{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    
+    #hero img{
+        display: none;
+    }
+
+    /*PROJECTS DEL*/
+    #projects{
+        display: none;
+        background-color: #000;
+        position: relative;
+        padding: 1rem;
+        padding-bottom: 5rem;
+        height: 90vh;
+    }
+
+    .projects-mobile{
+        display: none;
+    }
+
+    .projects-desktop{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1.2rem;
+        text-align: center;
+    }
+
+    .projects-desktop div{
+        background-color: #0A7A99;
+        padding: .5rem;
+    }
+
+    .projects-desktop img{
+        max-width: 21vw;
+        max-height: 21vw;
+        filter: grayscale(100%);
+    }
+
+    .projects-desktop img:hover{
+        transition: ease-in-out 1s;
+        filter: grayscale(0%);
+    }
+
+    .projects-desktop a{
+        color: #fff;
+    }
+
+    /*PROJECTS DEL END*/
+
+
+    /*CONTACT*/
+    #contact{
+        position: relative;
+        padding: 5rem 20vw 0 20vw;
+        margin-top: .0rem;
+        display: flex;
+        flex-direction: column;
+        height: 91.7vh;
+        display: none;
+    }
+
+    #contact:after{
+        transform: skewY(0deg);
+    }
+
+    #contact::before{
+        background-image: url("img/cat-4977436_1920.jpg");
+        filter: grayscale(100%);
+        content: "";
+        position: absolute;
+        top: 0; 
+        left: 0;
+        width: 100%; 
+        height: 100%;
+    }
+
+    #contact-inside{
+        position: relative;
+    }
+
+    form{
+        margin-top: 1rem;
+    }
+
+    .form-control{
+        font-family: 'Montserrat', sans-serif;
+        width: 100%;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #fff;
+        border-bottom: 1px solid #fff;
+        font-size: 1.2rem;
+        margin-bottom: 1.2rem;
+    }
+
+    input{
+        height: 2rem;
+    }
+
+    form .submit{
+        background-color: #0A7A99;
+        border-color: transparent;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: bold;
+        letter-spacing: .2rem;
+        height: 3rem;
+        margin-top: 1.2rem;
+        border-radius: 1.5rem;
+    }
+
+    form .submit:hover{
+        background-color: #3A606E;
+        cursor: pointer;
+    }
+    /*CONTACT END*/
+
+    footer{
+        text-align: center;
+        height: 3rem;
+        margin-top: 0;
     }
 }
