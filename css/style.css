@@ -63,6 +63,7 @@ h2{
 .navbar-nav a{
     padding: 1.5rem 1vw 1.5rem 1vw;
     width: 100%;
+    color: #fff;
 }
 
 .navbar-nav a:hover {
@@ -282,6 +283,10 @@ footer{
     #hero img{
         display: none;
     }
+
+    *{
+        font-size: 24px;
+    }
 }
 
 
@@ -309,17 +314,22 @@ footer{
         justify-content: center;
     }
 
+   
+
     #hero {
         background-image: url("img/cat-3678858_1920.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
         filter: grayscale(100%);
         color: #fff;
         position: relative;
         padding: 1rem;
         padding-top: 20vh;
         padding-bottom: 1rem;
-        height: 78.3vh;
         display: grid;
         grid-template-rows: repeat(2, 1fr);
+        height: 71vh;
     }
 
     #hero:after{
@@ -342,7 +352,7 @@ footer{
         position: relative;
         padding: 1rem;
         padding-bottom: 5rem;
-        height: 90vh;
+        height: 83.5vh;
     }
 
     .projects-mobile{
@@ -354,6 +364,7 @@ footer{
         grid-template-columns: repeat(3, 1fr);
         column-gap: 1.2rem;
         text-align: center;
+        
     }
 
     .projects-desktop div{
@@ -386,7 +397,7 @@ footer{
         margin-top: .0rem;
         display: flex;
         flex-direction: column;
-        height: 91.7vh;
+        height: 85vh;
         display: none;
     }
 
@@ -396,6 +407,10 @@ footer{
 
     #contact::before{
         background-image: url("img/cat-4977436_1920.jpg");
+        background-repeat: no-repeat;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
         filter: grayscale(100%);
         content: "";
         position: absolute;
@@ -449,7 +464,8 @@ footer{
 
     footer{
         text-align: center;
-        height: 3rem;
-        margin-top: 0;
+        height: 4vh;
+        margin: 0;
+        display: block;
     }
 }

@@ -23,6 +23,12 @@ function checkHomeButton() {
         projects.style.display = "none";
         contact.style.display = "none";
     }
+
+    else if (w < 700) {
+        hero.style.display = "block";
+        projects.style.display = "block";
+        contact.style.display = "block"; 
+    }
 }
 
 function checkContactButton() {
@@ -33,6 +39,12 @@ function checkContactButton() {
         projects.style.display = "block";
         contact.style.display = "none";
     }
+
+    else if (w < 700) {
+        hero.style.display = "block";
+        projects.style.display = "block";
+        contact.style.display = "block"; 
+    }
 }
 
 function checkProjectsButton() {
@@ -42,5 +54,11 @@ function checkProjectsButton() {
         hero.style.display = "none";
         projects.style.display = "none";
         contact.style.display = "block";
+    }
+
+    else if (w < 700) {
+        hero.style.display = "block";
+        projects.style.display = "block";
+        contact.style.display = "block"; 
     }
 }
